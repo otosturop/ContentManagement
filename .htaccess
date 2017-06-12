@@ -1,0 +1,12 @@
+RewriteEngine on
+
+#ErrorDocument 404 http://localhost/daralt/404.php
+
+RewriteRule ^iletisim$ contact.php [NC,L]
+RewriteRule ^hakkimizda$ about.php [NC,L]
+RewriteRule ^haberler$ news.php [NC,L]
+RewriteRule ^duyurular$ announcement.php [NC,L]
+RewriteRule ^saglik-bulteni$ healty-news.php [NC,L]
+RewriteRule ^anasayfa$ index.php [NC,L]
+
+RewriteRule ^([0-9a-zA-Z-_]+)-([0-9]+)$ news-detail.php?sef=$1&icerik_id=$2 [L,QSA]
